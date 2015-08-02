@@ -48,6 +48,7 @@ guard :rspec, cmd: 'bundle exec rspec' do
 
   watch(%r{^app/(.+)\.rb$}) { |m| "spec/app/#{m[1]}_spec.rb" }
   watch(%r{^app/views/(.+)$}) { rspec.spec_dir }
+  watch(%r{^config/(.+)$}) { rspec.spec_dir }
 end
 
 guard 'yard' do
