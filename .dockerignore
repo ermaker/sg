@@ -1,0 +1,7 @@
+.git/
+.bundle/
+.yardoc/
+doc/
+spec/
+tmp/
+.env
