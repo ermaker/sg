@@ -7,5 +7,7 @@ RSpec.feature Honeypot::App do
 
   scenario 'get /' do
     visit '/'
+    expect(page).to have_title('Honeypot')
+    expect(page).to have_content('Hello, Honeypot!')
   end
 end

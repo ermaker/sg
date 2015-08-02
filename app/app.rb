@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require 'tilt/haml'
 require 'mongoid'
 
 module Honeypot
@@ -6,6 +7,10 @@ module Honeypot
   class App < Sinatra::Base
     configure do
       Mongoid.load!(File.expand_path('../../config/mongoid.yml', __FILE__))
+    end
+
+    get '/' do
+      haml :index
     end
   end
 end
