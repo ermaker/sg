@@ -6,6 +6,8 @@ gem 'foreman'
 gem 'rack'
 gem 'rack-timeout'
 gem 'sinatra', require: 'sinatra/base'
+gem 'mongoid'
+gem 'bson_ext'
 
 group :development, :test do
   gem 'pry'
@@ -13,6 +15,7 @@ group :development, :test do
   gem 'rspec'
   gem 'rack-test'
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'guard'
   gem 'guard-rubocop'
   gem 'guard-rspec'

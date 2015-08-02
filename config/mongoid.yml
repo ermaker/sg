@@ -1,0 +1,12 @@
+development:
+  sessions:
+    default:
+      database: honeypot_development
+      hosts:
+        - localhost
+test:
+  sessions:
+    default:
+      database: honeypot_test
+      hosts:
+        - localhost
