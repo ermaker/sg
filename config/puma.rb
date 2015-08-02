@@ -8,5 +8,5 @@ port ENV['PORT']
 environment ENV['RACK_ENV']
 
 on_worker_boot do
-    preload_app!
+  preload_app!
 end
