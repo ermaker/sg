@@ -12,4 +12,4 @@ Rack::Timeout.timeout = 5
 
 require 'app'
 
-run Honeypot::App
+run SG::App

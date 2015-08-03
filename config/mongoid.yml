@@ -1,12 +1,12 @@
 development:
   sessions:
     default:
-      database: honeypot_development
+      database: sg_development
       hosts:
         - localhost
 test:
   sessions:
     default:
-      database: honeypot_test
+      database: sg_test
       hosts:
         - localhost

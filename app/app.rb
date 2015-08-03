@@ -1,8 +1,9 @@
 require 'sinatra/base'
 require 'tilt/haml'
 require 'mongoid'
+require 'models/honey'
 
-module Honeypot
+module SG
   # The main app class
   class App < Sinatra::Base
     configure do
@@ -11,6 +12,12 @@ module Honeypot
 
     get '/' do
       haml :index
+    end
+
+    post '/' do
+      request.body.rewind
+      honey_raw = request.body.read
+      Honey.create(JSON.parse(honey_raw)) unless honey_raw.empty?
     end
   end
 end

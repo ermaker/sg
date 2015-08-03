@@ -1,6 +1,6 @@
 require 'mongoid'
 
-module Honeypot
+module SG
   # The Container for anything
   class Honey
     include Mongoid::Document
