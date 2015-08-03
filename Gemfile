@@ -9,6 +9,7 @@ gem 'sinatra', require: 'sinatra/base'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'haml'
+gem 'tilt-jbuilder', require: 'sinatra/jbuilder'
 
 group :development, :test do
   gem 'pry'

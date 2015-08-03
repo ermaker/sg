@@ -24,10 +24,17 @@ RSpec.feature SG::App do
       expect(SG::Honey.first.attributes.size).to eq(1)
     end
 
-    scenario 'with empty' do
+    scenario 'with json' do
       page.driver.post('/', { a: 1, b: 2 }.to_json)
       expect(SG::Honey.all.size).to eq(1)
       expect(SG::Honey.first.attributes.size).to eq(3)
     end
+  end
+
+  scenario 'get /:uid.json' do
+    visit '/0.json'
+    expect(JSON.parse(page.body)).to match('number' => 0, 'action' => 0)
+    visit '/1.json'
+    expect(JSON.parse(page.body)).to match('number' => 1, 'action' => 1)
   end
 end
